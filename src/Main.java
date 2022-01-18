@@ -5,14 +5,25 @@ public class Main {
         Calculator calc = Calculator.instance.get();
 
         int a = calc.plus.apply(1, 2);
+            calc.println.accept(a);
+        int b = calc.minus.apply(1, 1);
+            calc.println.accept(b);
         try {
-            int b = calc.minus.apply(1, 1); // now b = 0, late will be ArithmeticException - "/ by zero".
-            // make second parameter != first parameter, make y > x || y < x to fix this, or use try-catch.
             int c = calc.devide.apply(a, b);
             calc.println.accept(c);
-
         } catch (ArithmeticException exception) {
-            System.out.println("Деление на ноль! Измените параметр у. y не должен быть равен x");
+            System.out.println("Деление на ноль невозможно!");
         }
+        int d = calc.multiply.apply(2, 10);
+            calc.println.accept(d);
+
+        int e = calc.pow.apply(4);
+        calc.println.accept(e);
+
+        int f = calc.abs.apply(-10);
+        calc.println.accept(f);
+
+        System.out.println(calc.isPositive.test(5));
+
     }
 }
