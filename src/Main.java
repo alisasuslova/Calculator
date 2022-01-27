@@ -8,12 +8,9 @@ public class Main {
             calc.println.accept(a);
         int b = calc.minus.apply(1, 1);
             calc.println.accept(b);
-        try {
-            int c = calc.devide.apply(a, b);
-            calc.println.accept(c);
-        } catch (ArithmeticException exception) {
-            System.out.println("Деление на ноль невозможно!");
-        }
+
+        System.out.println(calc.devide(5,0));
+
         int d = calc.multiply.apply(2, 10);
             calc.println.accept(d);
 
