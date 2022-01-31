@@ -18,7 +18,9 @@ public class Calculator {
     public double devide(int x, int y) {
         double a = x;
         double b = y;
-        if (y == 0) { b = Double.MIN_VALUE;}
+        if (y == 0) {
+            b = Double.MIN_VALUE;
+        }
         double c = a / b;
         return c;
 
